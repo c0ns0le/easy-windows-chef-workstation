@@ -7,6 +7,7 @@ driver:
   security_group_ids: <%= ENV['SECURITY_GROUP_IDS'] %>
   subnet_id: <%= ENV['SUBNET_ID'] %>
   aws_ssh_key_id: <%= ENV['AWS_SSH_KEY_ID'] %>
+  region: <%= ENV['AWS_DEFAULT_REGION'] %>
   flavor_id: <%= ENV['FLAVOR_ID'] %>
   availability_zone: <%= ENV['AVAILABILITY_ZONE'] %>
   require_chef_omnibus: true
