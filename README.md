@@ -1,2 +1,4 @@
 # easy-windows-chef-workstation
-this chef cookbook will help you set up your windows machine for chef development 
+
+TODO: Sets up Windows 7, 8, or 2012 Server as a Chef Workstation
+
