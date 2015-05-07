@@ -10,9 +10,10 @@ driver:
   security_group_ids: ['sg-8f737aea']
   subnet_id: subnet-f9fc609c
   image_id: ami-d7450be7
-  flavor_id: m1.small
+  flavor_id: t2.small
   ssh_timeout: 3
   ssh_retries: 5
+  username: ec2-user
   #require_chef_omnibus: 11.16.4
   tags:
     Name: "Chef Training Node"
