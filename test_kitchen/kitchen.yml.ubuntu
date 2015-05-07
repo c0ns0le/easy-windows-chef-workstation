@@ -9,7 +9,7 @@ driver:
   availability_zone: us-west-2a
   security_group_ids: ['sg-8f737aea']
   subnet_id: subnet-f9fc609c
-  image_id: ami-d7450be7
+  image_id: ami-5189a661
   flavor_id: m1.small
   ssh_timeout: 3
   ssh_retries: 5

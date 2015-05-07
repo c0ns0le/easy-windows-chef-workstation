@@ -3,7 +3,7 @@ driver:
   name: ec2
   aws_access_key_id: PUTYOURACCESSKEYHERE
   aws_secret_access_key: PUTYOURSECRETKEYHERE
-  ssh_key: C:\Users\Chef\.ssh\chef_aws.pem
+  ssh_key: C:\Users\Administrator\.ssh\chef_aws.pem
   aws_ssh_key_id: chef_user
   region: us-west-2
   availability_zone: us-west-2a
@@ -29,7 +29,7 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[apache::default]
+      #- recipe[apache::default]
       #- recipe[motd::default]
     attributes:
 
