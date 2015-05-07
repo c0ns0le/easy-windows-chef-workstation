@@ -54,4 +54,7 @@ Install-Module PSReadline
 # Install the ChefDK
 choco install -y chefdk -version 0.4.0.1 --force
 
+# Install the kitchen-ec2 driver
+chef gem install kitchen-ec2
+
 </powershell>
