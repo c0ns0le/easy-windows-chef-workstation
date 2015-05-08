@@ -44,8 +44,8 @@ wget http://i.imgur.com/TwOnX6j.jpg -OutFile win_xp_chef.jpg
 cd C:\Users\Administrator\
 wget https://gist.githubusercontent.com/scarolan/2e565bff0a6702a3a9cb/raw/fbf5e1662d00184d5ab9e41c6842dcc076989e05/set-wallpaper.ps1 -OutFile set-wallpaper.ps1
 # This doesn't work for some reason
-$command = "C:\Users\Administrator\set-wallpaper.ps1 MyPics win_xp_chef.jpg"
-Invoke-Expression $command
+& "C:\Users\Administrator\set-wallpaper.ps1" "MyPics" "win_xp_chef.jpg"
+#Invoke-Expression $command
 
 # Install PsGet and PSReadLine
 iex ((new-object net.webclient).DownloadString('https://psget.net/GetPsGet.ps1'))
@@ -55,6 +55,6 @@ Install-Module PSReadline
 choco install -y chefdk -version 0.4.0.1 --force
 
 # Install the kitchen-ec2 driver
-iex "chef gem install kitchen-ec2"
+& "chef" "gem" "install" "kitchen-ec2"
 
 </powershell>
