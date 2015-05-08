@@ -1,7 +1,7 @@
 <powershell>
 # Prep the machine for Chef bootstrap
 winrm quickconfig -q
-winrm set winrm/config/winrs '@{MaxMemoryPerShellMB="300"}'
+winrm set winrm/config/winrs '@{MaxMemoryPerShellMB="1200"}'
 winrm set winrm/config '@{MaxTimeoutms="1800000"}'
 winrm set winrm/config/service '@{AllowUnencrypted="true"}'
 winrm set winrm/config/service/auth '@{Basic="true"}'
@@ -14,7 +14,7 @@ net start winrm
 # Change admin password
 $admin = [adsi]("WinNT://./administrator, user")
 #$admin.psbase.invoke("SetPassword", "#{PASSWORD}")
-$admin.psbase.invoke("SetPassword", "CHANGEMETOSOMETHINGELSEPLEASE")
+$admin.psbase.invoke("SetPassword", "CHANGEME")
 
 # Install chocolatey and packages
 iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
@@ -56,5 +56,10 @@ choco install -y chefdk -version 0.4.0.1 --force
 
 # Install the kitchen-ec2 driver
 & "chef" "gem" "install" "kitchen-ec2"
+
+# Clone the git repo and copy support files
+git clone http://github.com/chefosaurus/easy-windows-chef-workstation
+mv C:\Users\Administrator\easy-windows-chef-workstation\support_files\rubocop.yml C:\Users\Administrator\.rubocop.yml
+mv C:\Users\Administrator\easy-windows-chef-workstation\support_files C:\Users\Administrator\Desktop\Test_Kitchen
 
 </powershell>
