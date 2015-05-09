@@ -15,7 +15,7 @@ Manual steps to finish workstation configuration:
 * Delete amazon shortcuts from desktop
 * Add license file to Sublime
 * Run ConEmu once to choose Powershell/Admin as the terminal
-* Put gramsay's ssh key in C:\Users\Administrator\.ssh\gramsay.pem
+* Put gramsay's ssh key in C:\Users\Administrator\\.ssh\gramsay.pem
 * Update windows background with: set-wallpaper.ps1 MyPics win\_xp\_chef.jpg
 * git clone https://github.com/chefosaurus/easy-windows-chef-workstation
 * Copy .rubocop.yml to ~/.rubocop.yml
