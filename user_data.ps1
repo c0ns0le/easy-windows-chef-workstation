@@ -44,8 +44,7 @@ wget http://i.imgur.com/TwOnX6j.jpg -OutFile win_xp_chef.jpg
 cd C:\Users\Administrator\
 wget https://gist.githubusercontent.com/scarolan/2e565bff0a6702a3a9cb/raw/fbf5e1662d00184d5ab9e41c6842dcc076989e05/set-wallpaper.ps1 -OutFile set-wallpaper.ps1
 # This doesn't work for some reason
-& "C:\Users\Administrator\set-wallpaper.ps1" "MyPics" "win_xp_chef.jpg"
-#Invoke-Expression $command
+# & "C:\Users\Administrator\set-wallpaper.ps1" "MyPics" "win_xp_chef.jpg"
 
 # Install PsGet and PSReadLine
 iex ((new-object net.webclient).DownloadString('https://psget.net/GetPsGet.ps1'))
@@ -54,12 +53,13 @@ Install-Module PSReadline
 # Install the ChefDK
 choco install -y chefdk -version 0.4.0.1 --force
 
+# None of what's below works
 # Install the kitchen-ec2 driver
-& "chef" "gem" "install" "kitchen-ec2"
+#& "chef" "gem" "install" "kitchen-ec2"
 
 # Clone the git repo and copy support files
-git clone http://github.com/chefosaurus/easy-windows-chef-workstation
-mv C:\Users\Administrator\easy-windows-chef-workstation\support_files\rubocop.yml C:\Users\Administrator\.rubocop.yml
-mv C:\Users\Administrator\easy-windows-chef-workstation\support_files C:\Users\Administrator\Desktop\Test_Kitchen
+#git clone http://github.com/chefosaurus/easy-windows-chef-workstation
+#mv C:\Users\Administrator\easy-windows-chef-workstation\support_files\rubocop.yml C:\Users\Administrator\.rubocop.yml
+#mv C:\Users\Administrator\easy-windows-chef-workstation\support_files C:\Users\Administrator\Desktop\Test_Kitchen
 
 </powershell>
