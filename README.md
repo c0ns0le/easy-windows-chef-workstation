@@ -18,6 +18,6 @@ Manual steps to finish workstation configuration:
 * Put gramsay's ssh key in C:\Users\Administrator\\.ssh\gramsay.pem
 * Update windows background with: set-wallpaper.ps1 MyPics win\_xp\_chef.jpg
 * git clone https://github.com/chefosaurus/easy-windows-chef-workstation
-* Copy .rubocop.yml to ~/.rubocop.yml
-* Move support\_files to ~/Desktop/Test\_Kitchen
+* Copy .rubocop.yml from support\_files to ~/.rubocop.yml
+* Move support\_files to the Desktop, rename it Test\_Kitchen
 * Put AWS API keys into kitchen.yml.centos, etc. files
