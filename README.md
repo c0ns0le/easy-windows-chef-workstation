@@ -21,3 +21,14 @@ Manual steps to finish workstation configuration:
 * Copy .rubocop.yml from support\_files to ~/.rubocop.yml
 * Move support\_files to the Desktop, rename it Test\_Kitchen
 * Put AWS API keys into kitchen.yml.centos, etc. files
+
+TODO:
+* Refactor this to use CloudFormation or Chef provisioning.
+* Put each training environment into its own VPC, subnet and security group
+* Tag each resource associated with the classroom, including networks, etc.
+* Need ability to destroy the entire classroom cleanly via the command line
+* Add protection to instances to prevent accidental shutdown?
+* Keys should be 'injectable' via environment variables
+
+Design goal:
+Enable user to spin up a classroom environment from a smartphone while eating breakfast tacos.
