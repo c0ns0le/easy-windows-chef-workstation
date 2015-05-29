@@ -5,4 +5,4 @@ license          'all_rights'
 description      'Installs/Configures easy-windows-chef-workstation'
 long_description 'Installs/Configures easy-windows-chef-workstation'
 version          '0.1.0'
-
+depends          'chocolatey', '= 0.3.0'
