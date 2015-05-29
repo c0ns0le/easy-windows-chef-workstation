@@ -6,3 +6,4 @@
 
 include_recipe "easy-windows-chef-workstation::users"
 include_recipe "easy-windows-chef-workstation::packages"
+include_recipe "easy-windows-chef-workstation::configs"
