@@ -1,0 +1,16 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+  box: win2012r2
+
+platforms:
+  - name: win2012r2
+
+suites:
+  - name: default
+    run_list:
+      - recipe[easy-windows-chef-workstation::default]
+    attributes:
