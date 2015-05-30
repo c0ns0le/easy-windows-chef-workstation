@@ -5,7 +5,7 @@
 # Copyright (c) 2015 The Authors, All Rights Reserved.
 
 # Configure various things
-powershell_script "Install PSReadLine" do
+powershell_script "Install PSGet" do
   code "(new-object Net.WebClient).DownloadString('http://psget.net/GetPsGet.ps1') | iex"
 end
 
