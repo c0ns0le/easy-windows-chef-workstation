@@ -1,13 +1,14 @@
 # easy-windows-chef-workstation
 
-TODO: Enter the cookbook description here.
+This cookbook contains recipes and powershell scripts for configuring your Windows machine as a Chef workstation.
 
 =======
+The user_data.ps1 script does the following:
 * Preconfigures your workstation for Chef bootstrap by enabling WinRM
 * Installs the Chocolatey package manager
 * Installs Sublime Text editor, ConEmu, and PSReadline
 * Includes a powershell script for changing your desktop background
-* Installs the ChefDK which includes Chef, Test Kitchen, Rubocop, Foodcritic, and ChefSpec
+* Installs the ChefDK which includes Chef, Test Kitchen, Rubocop, Foodcritic, and ChefSpec (note, includes old version of chefdk)
 
 There are also some sample .kitchen.yml files in the support\_files directory.  You can use these as a starting point for running your own test kitchen setup in Amazon EC2.
 
